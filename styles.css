@@ -1,11 +1,10 @@
-/* Подключаем Google Fonts в самом верху */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
 /* Подключаем Helvetica Rounded */
 @font-face {
     font-family: 'Helvetica Rounded';
-    src: url('fonts/Helvetica-rounded.ttf') format('truetype');
+    src: url('./fonts/Helvetica-rounded.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh; /* Минимальная высота экрана */
+  min-height: 100vh;
 }
 
 header {
@@ -40,8 +39,8 @@ main {
   gap: 20px;
   flex-grow: 1;
   box-sizing: border-box;
-  padding: 0 5px; /* Боковые отступы */
-  margin-bottom: 15px; /* Чтобы внизу был такой же отступ, как сверху */
+  padding: 0 5px;
+  margin-bottom: 15px;
 }
 
 .grid {
@@ -53,7 +52,6 @@ main {
 }
 
 .square {
-  .square {
   width: calc(50% - 5px);
   aspect-ratio: 1 / 1;
   background: #eaeaea;
@@ -97,7 +95,6 @@ main {
     color: #777;
 }
 
-
 /* Квадратная кнопка "Дуа" */
 .big-button {
     width: calc(100% - 5px);
@@ -115,7 +112,7 @@ main {
     border-radius: 15px;
     box-sizing: border-box;
     filter: brightness(1.01);
-    font-display: "Helvetica Rounded", sans-serif;
+    font-family: "Helvetica Rounded", sans-serif;
 }
 
 /* Кнопка "Назад" */
@@ -157,6 +154,6 @@ main {
 
 /* Отступ в самом низу страницы */
 .footer-space {
-  height: 15px; /* Отступ равен отступу в header */
+  height: 15px;
   width: 100%;
 }
