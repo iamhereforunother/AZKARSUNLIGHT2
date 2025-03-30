@@ -22,12 +22,6 @@ header {
   line-height: 1.2; /* Добавляем немного высоты строки для ровности */
 }
 
-#header-emoji {
-  transform: scale(0.7em);
-  display: inline-block;
-  align-items: center;
-  line-height: 1; /* Убираем возможные расхождения */
-}
 
 main {
   width: 90%;
