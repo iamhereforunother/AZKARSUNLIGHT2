@@ -21,6 +21,11 @@ body {
   align-items: center;
   min-height: 100vh;
 }
+#header-emoji {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.1s;
+}
 
 header {
   width: 100%;
@@ -29,6 +34,9 @@ header {
   font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: bold;
+ opacity: 0;
+transform: translateY(20px);
+animation: fadeInUp 0.5s ease-out forwards;   
 }
 
 /* Основное содержимое */
@@ -50,6 +58,10 @@ main {
     background: #EAEAEA;
     border-radius: 15px;
     padding: 10px 0;
+    opacity: 0;
+transform: translateY(20px);
+animation: fadeInUp 0.5s ease-out forwards;
+animation-delay: 0.3s;
 }
 
 .list a {
@@ -91,6 +103,10 @@ main {
     box-sizing: border-box;
     filter: brightness(1.01);
     font-family: "Nunito Sans", sans-serif;
+    opacity: 0;
+transform: translateY(20px);
+animation: fadeInUp 0.5s ease-out forwards;
+animation-delay: 0.5s;
 }
 
 /* Кнопка "Назад" */
@@ -107,4 +123,14 @@ main {
 .footer-space {
   height: 15px;
   width: 100%;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
