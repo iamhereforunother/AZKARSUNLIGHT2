@@ -23,7 +23,7 @@ header {
 }
 
 #header-emoji {
-  font-size: 0.7em; /* Соответствует тексту */
+  font-size: 0.4em; /* Соответствует тексту */
   display: inline-flex;
   align-items: center;
   line-height: 1; /* Убираем возможные расхождения */
