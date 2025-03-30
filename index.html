@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZKAR</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZKAR</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>AZKAR <span id="header-emoji"></span></h1>
+    <h1>
+      AZKAR <span id="header-emoji" style="font-size: inherit;"></span>
+    </h1>
     <script>
       function randomEmoji() {
         const emojis = [
@@ -35,10 +37,7 @@
         ];
         return emojis[Math.floor(Math.random() * emojis.length)];
       }
-
-      window.onload = function() {
-        document.getElementById('header-emoji').innerHTML = randomEmoji();
-      };
+      document.getElementById('header-emoji').innerHTML = randomEmoji();
     </script>
   </header>
     <main>
