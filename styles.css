@@ -50,8 +50,8 @@ main {
 }
 
 .square {
-    width: 45%;
-    height: 100px;
+  width: calc(50% - 5px);
+  aspect-ratio: 1 / 1;
     background: #EAEAEA;
     color: #333;
     text-align: center;
@@ -95,7 +95,7 @@ main {
 .big-button {
     width: calc(100% - 5px);
     aspect-ratio: 10 / 5;
-    background-image: url("https://i.imgur.com/FEKzfyX.jpeg");
+    background-image: url("https://i.imgur.com/lucqUpc.jpeg");
     background-size: cover;
     background-position: center;
     color: #333;
@@ -108,6 +108,7 @@ main {
     border-radius: 15px;
     box-sizing: border-box;
     filter: brightness(1.01);
+    font-display: "Helvetica Rounded", sans-serif;
 }
 
 /* Кнопка "Назад" */
