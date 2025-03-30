@@ -23,8 +23,7 @@ header {
 }
 
 #header-emoji {
-  #header-emoji {
-  transform: scale(0.7);
+  transform: scale(0.7em);
   display: inline-block;
   align-items: center;
   line-height: 1; /* Убираем возможные расхождения */
