@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
 
 /* Подключаем Helvetica Rounded */
@@ -11,7 +10,7 @@
 
 /* Основные стили */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   background: #f7f7f7;
   color: #333;
   margin: 0;
@@ -26,11 +25,11 @@ header {
   width: 100%;
   text-align: center;
   padding: 15px 0;
-  font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: bold;
 }
 
+/* Основное содержимое */
 main {
   width: 90%;
   display: flex;
@@ -41,29 +40,6 @@ main {
   box-sizing: border-box;
   padding: 0 5px;
   margin-bottom: 15px;
-}
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
-  justify-content: center;
-}
-
-.square {
-  width: calc(50% - 5px);
-  aspect-ratio: 1 / 1;
-  background: #eaeaea;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  text-decoration: none;
-  border-radius: 15px;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 /* Список */
@@ -97,7 +73,7 @@ main {
 
 /* Квадратная кнопка "Дуа" */
 .big-button {
-    width: calc(100% - 5px);
+    width: 100%;
     aspect-ratio: 10 / 5;
     background-image: url("https://i.imgur.com/lucqUpc.jpeg");
     background-size: cover;
@@ -125,74 +101,8 @@ main {
   color: #333;
 }
 
-.dua-slide {
-  display: none;
-  text-align: center;
-  margin-top: 20px;
-  padding: 20px;
-  background: #eaeaea;
-  width: 90%;
-  height: 300px;
-  border-radius: 15px;
-}
-
-.arabic {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.translation {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-.transliteration {
-  margin-top: 10px;
-  font-size: 16px;
-  font-style: italic;
-}
-
 /* Отступ в самом низу страницы */
 .footer-space {
   height: 15px;
   width: 100%;
-}
-
-/* Карточки азкаров */
-.azkar-card {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 10px 0;
-  width: 90%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.azkar-card .arabic {
-  font-size: 24px;
-  font-weight: bold;
-  color: #222;
-}
-
-.azkar-card .transliteration {
-  font-size: 18px;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-.azkar-card .translation {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #555;
-}
-
-/* Кнопка "Назад" */
-.back-button {
-  position: absolute;
-  left: 20px;
-  top: 15px;
-  font-size: 20px;
-  text-decoration: none;
-  color: #333;
 }
