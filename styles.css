@@ -19,6 +19,14 @@ header {
   font-family: "Playfair Display", serif;
   font-size: 24px;
   font-weight: bold;
+  line-height: 1.2; /* Добавляем немного высоты строки для ровности */
+}
+
+#header-emoji {
+  font-size: 1em; /* Соответствует тексту */
+  display: inline-flex;
+  align-items: center;
+  line-height: 1; /* Убираем возможные расхождения */
 }
 
 main {
