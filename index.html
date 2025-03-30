@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AZKAR</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+</head>
 <body>
   <header>
     <h1>
@@ -15,49 +18,35 @@
   <script>
     function randomEmoji() {
       const emojis = [
-        '&#129724;',
-        '&#129330;&#127995;',
-        '&#129293;',
-        '&#127878;',
-        '&#129723;',
-        '&#129709;',
-        '&#129719;',
-        '&#129496;&#127995;&#8205;&#9792;&#65039;',
-        '&#127793;',
-        '&#129744;',
-        '&#128255;',
-        '&#127824;',
-        '&#127757;',
-        '&#127827;',
-        '&#128331;',
-        '&#127817;',
-        '&#129767;',
-        '&#129725;',
-        '&#129384;',
-        '&#9829;&#65039;'
+        '&#129724;', '&#129330;&#127995;', '&#129293;', '&#127878;', '&#129723;', '&#129709;',
+        '&#129719;', '&#129496;&#127995;&#8205;&#9792;&#65039;', '&#127793;', '&#129744;',
+        '&#128255;', '&#127824;', '&#127757;', '&#127827;', '&#128331;', '&#127817;',
+        '&#129767;', '&#129725;', '&#129384;', '&#9829;&#65039;'
       ];
       return emojis[Math.floor(Math.random() * emojis.length)];
     }
-    document.getElementById('header-emoji').innerHTML = randomEmoji();
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById('header-emoji').innerHTML = randomEmoji();
+    });
   </script>
-    <main>
-        <div class="grid">
-            <a href="dua.html?type=morning" class="square"> &#127749; Утренние </a>
-            <a href="dua.html?type=evening" class="square">🌌 Вечерние</a>
-        </div>
 
-        <div class="list">
-            <a href="dua.html?type=before-sleep">
-                <span>🛌 Перед сном</span> <span class="arrow">›</span>
-            </a>
-            <hr>
-            <a href="dua.html?type=after-wakeup">
-                <span>🧘🏻 После пробуждения</span> <span class="arrow">›</span>
-            </a>
-        </div>
+  <main>
+    <div class="grid">
+      <a href="azkar.html?type=morning" class="square">🌅 Утренние</a>
+      <a href="azkar.html?type=evening" class="square">🌌 Вечерние</a>
+    </div>
 
-        <a href="dua.html" class="big-button">Дуа</a>
-    </main>
+    <div class="list">
+      <a href="azkar.html?type=before-sleep">
+        <span>🛌 Перед сном</span> <span class="arrow">›</span>
+      </a>
+      <hr>
+      <a href="azkar.html?type=after-wakeup">
+        <span>🧘🏻 После пробуждения</span> <span class="arrow">›</span>
+      </a>
+    </div>
 
+    <a href="dua.html" class="big-button">Дуа</a>
+  </main>
 </body>
 </html>
