@@ -157,3 +157,42 @@ main {
   height: 15px;
   width: 100%;
 }
+
+/* Карточки азкаров */
+.azkar-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.azkar-card .arabic {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
+
+.azkar-card .transliteration {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.azkar-card .translation {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Кнопка "Назад" */
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
