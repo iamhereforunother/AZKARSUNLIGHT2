@@ -12,41 +12,44 @@
 
 /* Основные стили */
 body {
-    font-family: 'Helvetica Rounded', sans-serif;
-    background: #F7F7F7;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Минимальная высота экрана */
 }
 
-/* Заголовок */
 header {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* Контейнер */
 main {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding: 0 5px; /* Боковые отступы */
+  margin-bottom: 15px; /* Чтобы внизу был такой же отступ, как сверху */
 }
 
-/* Квадратные кнопки */
 .grid {
-    display: flex;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
 }
 
 .square {
@@ -88,12 +91,12 @@ main {
     border: 0.5px solid #ccc;
 }
 
-/* Стрелка */
 .arrow {
     font-size: 22px;
     font-weight: bold;
     color: #777;
 }
+
 
 /* Квадратная кнопка "Дуа" */
 .big-button {
@@ -117,39 +120,43 @@ main {
 
 /* Кнопка "Назад" */
 .back-button {
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #333;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
 }
 
-/* Слайды дуа */
 .dua-slide {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    background: #EAEAEA;
-    width: 90%;
-    height: 300px;
-    border-radius: 15px;
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background: #eaeaea;
+  width: 90%;
+  height: 300px;
+  border-radius: 15px;
 }
 
-/* Стили текста дуа */
 .arabic {
-    font-size: 28px;
-    font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .translation {
-    margin-top: 10px;
-    font-size: 18px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
 .transliteration {
-    margin-top: 10px;
-    font-size: 16px;
-    font-style: italic;
+  margin-top: 10px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Отступ в самом низу страницы */
+.footer-space {
+  height: 15px; /* Отступ равен отступу в header */
+  width: 100%;
 }
