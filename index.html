@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZKAR</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function randomEmoji() {
+            const emojis = ['&#129418;', '&#129724;', '&#127749;', '&#127907;', '&#129464;', '&#129456;', '&#127822;', '&#127812;', '&#127807;', '&#128308;', '&#129508;'];
+            return emojis[Math.floor(Math.random() * emojis.length)];
+        }
+
+        window.onload = function() {
+            document.getElementById('header-emoji').innerHTML = randomEmoji();
+        };
+    </script>
 </head>
 <body>
 
     <header>
-        <h1>AZKAR &#129724</h1>
+        <h1>AZKAR <span id="header-emoji"></span></h1>
     </header>
 
     <main>
         <div class="grid">
-          <a href="dua.html?type=morning" class="square"> &#127749 Утренние </a>
+            <a href="dua.html?type=morning" class="square"> &#127749; Утренние </a>
             <a href="dua.html?type=evening" class="square">🌌 Вечерние</a>
         </div>
 
