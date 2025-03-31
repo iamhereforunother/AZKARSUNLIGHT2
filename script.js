@@ -3,16 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSlide = 0;
     let xStart = null;
 
-    if (slides.length === 0) {
-        console.warn("Нет элементов с классом 'dua-slide'. Слайды не будут работать.");
-        return;
-    }
+    if (slides.length === 0) return;
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? "1" : "0";
-            slide.style.position = i === index ? "relative" : "absolute";
-            slide.style.zIndex = i === index ? "1" : "-1";
+            slide.style.display = i === index ? "flex" : "none";
         });
     }
 
@@ -32,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleTouchMove(evt) {
         if (!xStart) return;
-
         let xEnd = evt.touches[0].clientX;
         let xDiff = xStart - xEnd;
 
@@ -45,14 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("touchstart", handleTouchStart, false);
     document.addEventListener("touchmove", handleTouchMove, false);
 
-    // Убираем прелоадер после полной загрузки
-    window.onload = () => {
+    setTimeout(() => {
         document.body.classList.add("loaded");
-        document.getElementById("preloader").style.opacity = "0";
-        setTimeout(() => {
-            document.getElementById("preloader").style.display = "none";
-        }, 500);
-    };
+        document.body.style.opacity = "1";
+    }, 1000);
 
     showSlide(currentSlide);
 });
