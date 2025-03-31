@@ -1,88 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Nunito+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Nunito Sans', Arial, sans-serif;
-    background: linear-gradient(to bottom, #fefefe, #f3f4f6);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    padding: 20px;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  background: #fefefe;
+  color: #333;
+  text-align: center; /* выравнивание всего текста по центру */
+  padding: 20px;
 }
 
-/* Контейнер */
+/* Заголовок страницы */
+.header {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #222;
+  margin: 20px 0;
+}
+
+/* Сплошная линия под заголовком */
+.header-divider {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Стрелки навигации */
+.nav-arrows {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Контейнер для основного контента */
 .container {
-    max-width: 600px;
-    width: 100%;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid #e0e0e0;
-    text-align: center;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* Номер страницы (по центру) */
+/* Номер страницы по центру */
 .page-number {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 15px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* Арабский текст */
+/* Арабский текст в сером контейнере */
 .arabic {
-    font-family: 'Noto Naskh Arabic', sans-serif;
-    font-size: 26px;
-    text-align: right;
-    color: #222;
-    font-weight: bold;
-    line-height: 1.6;
-    padding: 15px;
-    background: #ffffff;
-    border-radius: 8px;
+  font-family: 'Noto Naskh Arabic', sans-serif;
+  font-size: 26px;
+  color: #222;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 15px;
+  background: #f2f2f2; /* серый фон чуть темнее основного */
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Разделительная линия */
+/* Разделительные линии с градиентом */
 .divider {
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #ddd, transparent);
-    margin: 20px 0;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #bbb, transparent);
+  margin: 20px auto;
 }
 
 /* Заголовки секций */
 .section-title {
-    font-size: 15px;
-    color: #444;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: left;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
+  font-size: 14px;
+  color: #9999;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 13px;
 }
 
-/* Транскрипция и перевод */
-.transcription, .translation {
-    font-size: 18px;
-    text-align: left;
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 8px;
-    width: 100%;
-    line-height: 1.6;
-    border: 1px solid #ddd;
-}
-
+/* Транскрипция и Перевод (без лишних контейнеров) */
+.transcription, 
 .translation {
-    background-color: #fcfcfc;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  text-align: center;
+  border: none;
+  background: none;
 }
