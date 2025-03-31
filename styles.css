@@ -1,154 +1,136 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
-
-/* Подключаем Helvetica Rounded */
-@font-face {
-    font-family: 'Helvetica Rounded';
-    src: url('./fonts/Helvetica-rounded.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Основные стили */
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    opacity: 0;
-    transition: opacity 0.8s ease-out;
-}
-
-#header-emoji {
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-out forwards;
-    animation-delay: 0.1s;
-}
-
-header {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;   
-}
-
-/* Основное содержимое */
-main {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    flex-grow: 1;
-    box-sizing: border-box;
-    padding: 0 5px;
-    margin-bottom: 15px;
-}
-
-/* Список */
-.list {
-    width: 100%;
-    background: #EAEAEA;
-    border-radius: 15px;
-    padding: 10px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
-    animation-delay: 0.3s;
-}
-
-.list a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-}
-
-.list hr {
-    margin: 0;
-    border: 0.5px solid #ccc;
-}
-
-.arrow {
-    font-size: 22px;
-    font-weight: bold;
-    color: #777;
-}
-
-/* Квадратная кнопка "Дуа" */
-.big-button {
-    width: 100%;
-    aspect-ratio: 10 / 5;
-    background-image: url("https://i.imgur.com/lucqUpc.jpeg");
-    background-size: cover;
-    background-position: center;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 15px;
-    box-sizing: border-box;
-    filter: brightness(1.01);
-    font-family: "Nunito Sans", sans-serif;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
-    animation-delay: 0.5s;
-}
-
-/* Прелоадер */
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
-}
-
-.preloader-text {
-    font-size: 36px;
-    font-weight: bold;
-    font-family: "Nunito", sans-serif;
-}
-
-/* Когда сайт загружается */
-.loaded #preloader {
-    opacity: 0;
-    pointer-events: none;
-    display: none;
-}
-
-/* Анимация */
+ @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+ 
+ /* Подключаем Helvetica Rounded */
+ @font-face {
+     font-family: 'Helvetica Rounded';
+     src: url('./fonts/Helvetica-rounded.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ /* Основные стили */
+ body {
+   font-family: Arial, sans-serif;
+   background: #f7f7f7;
+   color: #333;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-height: 100vh;
+ }
+ #header-emoji {
+   opacity: 0;
+   animation: fadeInUp 0.5s ease-out forwards;
+   animation-delay: 0.1s;
+ }
+ 
+ header {
+   width: 100%;
+   text-align: center;
+   padding: 15px 0;
+   font-family: "Playfair Display", serif;
+   font-size: 24px;
+   font-weight: bold;
+  opacity: 0;
+ transform: translateY(20px);
+ animation: fadeInUp 0.5s ease-out forwards;   
+ }
+ 
+ /* Основное содержимое */
+ main {
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   flex-grow: 1;
+   box-sizing: border-box;
+   padding: 0 5px;
+   margin-bottom: 15px;
+ }
+ 
+ /* Список */
+ .list {
+     width: 100%;
+     background: #EAEAEA;
+     border-radius: 15px;
+     padding: 10px 0;
+     opacity: 0;
+ transform: translateY(20px);
+ animation: fadeInUp 0.5s ease-out forwards;
+ animation-delay: 0.3s;
+ }
+ 
+ .list a {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 20px;
+     font-size: 18px;
+     text-decoration: none;
+     color: #333;
+ }
+ 
+ .list hr {
+     margin: 0;
+     border: 0.5px solid #ccc;
+ }
+ 
+ .arrow {
+     font-size: 22px;
+     font-weight: bold;
+     color: #777;
+ }
+ 
+ /* Квадратная кнопка "Дуа" */
+ .big-button {
+     width: 100%;
+     aspect-ratio: 10 / 5;
+     background-image: url("https://i.imgur.com/lucqUpc.jpeg");
+     background-size: cover;
+     background-position: center;
+     color: #333;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 25px;
+     text-decoration: none;
+     font-style: bold;
+     border-radius: 15px;
+     box-sizing: border-box;
+     filter: brightness(1.01);
+     font-family: "Nunito Sans", sans-serif;
+     opacity: 0;
+ transform: translateY(20px);
+ animation: fadeInUp 0.5s ease-out forwards;
+ animation-delay: 0.5s;
+ }
+ 
+ /* Кнопка "Назад" */
+ .back-button {
+   position: absolute;
+   left: 20px;
+   top: 15px;
+   font-size: 20px;
+   text-decoration: none;
+   color: #333;
+ }
+ 
+ /* Отступ в самом низу страницы */
+ .footer-space {
+   height: 15px;
+   width: 100%;
+ }
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+   from {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
