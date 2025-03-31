@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const slides = document.querySelectorAll(".dua-slide");
+const slides = document.querySelectorAll(".zikr");
 
 document.addEventListener("touchstart", handleTouchStart, false);
 document.addEventListener("touchmove", handleTouchMove, false);
@@ -37,4 +37,6 @@ function prevSlide() {
     showSlide(currentSlide);
 }
 
-showSlide(currentSlide);
+document.addEventListener("DOMContentLoaded", () => {
+    showSlide(currentSlide);
+});
