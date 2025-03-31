@@ -1,48 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".dua-slide");
-    let currentSlide = 0;
-    let xStart = null;
+let currentSlide = 0;
+const slides = document.querySelectorAll(".dua-slide");
 
-    if (slides.length === 0) return;
+document.addEventListener("touchstart", handleTouchStart, false);
+document.addEventListener("touchmove", handleTouchMove, false);
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? "flex" : "none";
-        });
-    }
+let xStart = null;
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
+function handleTouchStart(evt) {
+    xStart = evt.touches[0].clientX;
+}
 
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-    }
+function handleTouchMove(evt) {
+    if (!xStart) return;
+    let xEnd = evt.touches[0].clientX;
+    let xDiff = xStart - xEnd;
 
-    function handleTouchStart(evt) {
-        xStart = evt.touches[0].clientX;
-    }
+    if (xDiff > 50) nextSlide();
+    if (xDiff < -50) prevSlide();
 
-    function handleTouchMove(evt) {
-        if (!xStart) return;
-        let xEnd = evt.touches[0].clientX;
-        let xDiff = xStart - xEnd;
+    xStart = null;
+}
 
-        if (xDiff > 50) nextSlide();
-        if (xDiff < -50) prevSlide();
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === index ? "flex" : "none";
+    });
+}
 
-        xStart = null;
-    }
-
-    document.addEventListener("touchstart", handleTouchStart, false);
-    document.addEventListener("touchmove", handleTouchMove, false);
-
-    setTimeout(() => {
-        document.body.classList.add("loaded");
-        document.body.style.opacity = "1";
-    }, 1000);
-
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-});
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
