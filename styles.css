@@ -11,45 +11,48 @@
 
 /* Основные стили */
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
 }
+
 #header-emoji {
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.1s;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.1s;
 }
 
 header {
-  width: 100%;
-  text-align: center;
-  padding: 15px 0;
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  font-weight: bold;
- opacity: 0;
-transform: translateY(20px);
-animation: fadeInUp 0.5s ease-out forwards;   
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;   
 }
 
 /* Основное содержимое */
 main {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  flex-grow: 1;
-  box-sizing: border-box;
-  padding: 0 5px;
-  margin-bottom: 15px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: 0 5px;
+    margin-bottom: 15px;
 }
 
 /* Список */
@@ -59,9 +62,9 @@ main {
     border-radius: 15px;
     padding: 10px 0;
     opacity: 0;
-transform: translateY(20px);
-animation: fadeInUp 0.5s ease-out forwards;
-animation-delay: 0.3s;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.3s;
 }
 
 .list a {
@@ -98,31 +101,15 @@ animation-delay: 0.3s;
     justify-content: center;
     font-size: 25px;
     text-decoration: none;
-    font-style: bold;
+    font-weight: bold;
     border-radius: 15px;
     box-sizing: border-box;
     filter: brightness(1.01);
     font-family: "Nunito Sans", sans-serif;
     opacity: 0;
-transform: translateY(20px);
-animation: fadeInUp 0.5s ease-out forwards;
-animation-delay: 0.5s;
-}
-
-/* Кнопка "Назад" */
-.back-button {
-  position: absolute;
-  left: 20px;
-  top: 15px;
-  font-size: 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-/* Отступ в самом низу страницы */
-.footer-space {
-  height: 15px;
-  width: 100%;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.5s;
 }
 
 /* Прелоадер */
@@ -145,35 +132,23 @@ animation-delay: 0.5s;
     font-size: 36px;
     font-weight: bold;
     font-family: "Nunito", sans-serif;
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* Анимация появления текста */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
 }
 
 /* Когда сайт загружается */
 .loaded #preloader {
     opacity: 0;
     pointer-events: none;
+    display: none;
 }
 
-/* Чтобы весь сайт не был виден сразу */
-body {
-    opacity: 0;
-    transition: opacity 0.8s ease-out;
-}
-
+/* Анимация */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
