@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Nunito+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+.back-button {
+   font-family: "Playfair Display", serif;
+   position: center;
+   left: 20px;
+   top: 15px;
+   font-size: 20px;
+   text-decoration: none;
+   color: #333;
+ }
 body {
   font-family: 'Nunito Sans', Arial, sans-serif;
   background: #fefefe;
@@ -42,7 +51,7 @@ body {
   width: 100%;
   margin-bottom: 0;
   opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .header h1 {
@@ -58,7 +67,7 @@ body {
   border-top: 2px solid #ddd;
   margin-bottom: 20px;
   opacity: 0;
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 /* Стрелки навигации */
@@ -94,7 +103,8 @@ body {
   margin-bottom: 15px;
   text-align: center;
   opacity: 0;
-  animation: fadeInUp 0.5s ease-out forwards 0.4s;
+  animation: fadeInUp 0.4s ease-out forwards 0.4s;
+  margin-top: 10px
 }
 
 /* Арабский текст в сером контейнере */
