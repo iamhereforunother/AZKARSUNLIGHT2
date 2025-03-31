@@ -3,11 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSlide = 0;
     let xStart = null;
 
-    if (slides.length === 0) return; // Если слайдов нет, ничего не делаем
+    if (slides.length === 0) {
+        console.warn("Нет элементов с классом 'dua-slide'. Слайды не будут работать.");
+        return;
+    }
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.style.display = i === index ? "flex" : "none";
+            slide.style.opacity = i === index ? "1" : "0";
+            slide.style.position = i === index ? "relative" : "absolute";
+            slide.style.zIndex = i === index ? "1" : "-1";
         });
     }
 
@@ -34,17 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
         if (xDiff > 50) nextSlide();
         if (xDiff < -50) prevSlide();
 
-        xStart = null; // Сбрасываем после свайпа
+        xStart = null;
     }
 
     document.addEventListener("touchstart", handleTouchStart, false);
     document.addEventListener("touchmove", handleTouchMove, false);
 
-    // Прелоадер
-    setTimeout(() => {
+    // Убираем прелоадер после полной загрузки
+    window.onload = () => {
         document.body.classList.add("loaded");
-        document.body.style.opacity = "1";
-    }, 1000);
+        document.getElementById("preloader").style.opacity = "0";
+        setTimeout(() => {
+            document.getElementById("preloader").style.display = "none";
+        }, 500);
+    };
 
     showSlide(currentSlide);
 });
