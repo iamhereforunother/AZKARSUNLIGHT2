@@ -1,48 +1,46 @@
 <!DOCTYPE html>
- <html lang="ru">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>AZKAR</title>
-   <link rel="stylesheet" href="styles.css">
-   <link rel="icon" type="image/png" href="icons/favicon.png">
-   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
- </head>
- <body>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZKAR</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+</head>
+<body>
 <header>
-     <h1>
-       AZKAR <span id="header-emoji"></span>
-     </h1>
-   </header>
- 
-   <script>
-     function randomEmoji() {
-       const emojis = [
-         '&#129724;', '&#129330;&#127995;', '&#129293;', '&#127878;', '&#129723;', '&#129709;',
-         '&#129719;', '&#129496;&#127995;&#8205;&#9792;&#65039;', '&#127793;', '&#129744;',
-         '&#128255;', '&#127824;', '&#127757;', '&#127827;', '&#128331;', '&#127817;',
-         '&#129767;', '&#129725;', '&#129384;', '&#9829;&#65039;'
-       ];
-       return emojis[Math.floor(Math.random() * emojis.length)];
-     }
-     document.addEventListener("DOMContentLoaded", () => {
-       document.getElementById('header-emoji').innerHTML = randomEmoji();
-     });
-   </script>
- 
-   <main>
- 
-     <div class="list">
-       <a href="azkar.html?type=before-sleep">
-         <span>🛌 Перед сном</span> <span class="arrow">›</span>
-       </a>
-       <hr>
-       <a href="azkar.html?type=after-wakeup">
-         <span>🧘🏻 После пробуждения</span> <span class="arrow">›</span>
-       </a>
-     </div>
- 
-     <a href="dua.html" class="big-button">Дуа</a>
-   </main>
- </body>
- </html>
+  <h1>
+    AZKAR <span id="header-emoji"></span>
+  </h1>
+</header>
+
+<script>
+  function randomEmoji() {
+    const emojis = [
+      '&#129724;', '&#129330;&#127995;', '&#129293;', '&#127878;', '&#129723;', '&#129709;',
+      '&#129719;', '&#129496;&#127995;&#8205;&#9792;&#65039;', '&#127793;', '&#129744;',
+      '&#128255;', '&#127824;', '&#127757;', '&#127827;', '&#128331;', '&#127817;',
+      '&#129767;', '&#129725;', '&#129384;', '&#9829;&#65039;'
+    ];
+    return emojis[Math.floor(Math.random() * emojis.length)];
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById('header-emoji').innerHTML = randomEmoji();
+  });
+</script>
+
+<main>
+  <div class="list">
+    <a href="before-sleep.html">
+      <span>🛌 Перед сном</span> <span class="arrow">›</span>
+    </a>
+    <hr>
+    <a href="azkar.html?type=after-wakeup">
+      <span>🧘🏻 После пробуждения</span> <span class="arrow">›</span>
+    </a>
+  </div>
+  <a href="dua.html" class="big-button">Дуа</a>
+</main>
+</body>
+</html>
