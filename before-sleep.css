@@ -1,71 +1,73 @@
-/* Подключение шрифтов */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
-/* Основные стили */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Nunito+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
 
 body {
     font-family: 'Nunito Sans', Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
-/* Стиль номера страницы */
 .page-number {
     font-family: 'Roboto Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     color: #777;
     text-align: right;
     width: 100%;
-    padding-right: 10px;
+    padding-right: 20px;
+    margin-bottom: 10px;
 }
 
-/* Арабский текст */
 .arabic {
     font-family: 'Noto Naskh Arabic', sans-serif;
     font-size: 24px;
     text-align: right;
     color: #000;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-/* Разделительная линия */
 .divider {
     width: 100%;
     height: 1px;
     background: #ddd;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
-/* Заголовки секций */
 .section-title {
-    font-size: 14px;
-    color: #888;
+    font-size: 16px;
+    color: #444;
     text-align: left;
     font-weight: bold;
     text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-/* Транскрипция */
-.transcription {
+.transcription, .translation {
     font-size: 18px;
-    color: #fff;
+    color: #333;
     text-align: left;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-/* Перевод */
+.transcription {
+    background-color: #f0f0f0;
+}
+
 .translation {
-    font-size: 16px;
-    color: #000;
-    text-align: left;
-    margin-top: 10px;
+    background-color: #fafafa;
 }
